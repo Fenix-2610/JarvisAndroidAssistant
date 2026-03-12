@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HOME" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/recentsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RECENTS"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/tapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TEST TAP"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/clickSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLICK SEND"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
