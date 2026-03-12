@@ -1,7 +1,7 @@
 package com.jarvis.androidassistant.command
 
 import android.accessibilityservice.AccessibilityService
-import com.jarvis.androidassistant.accessibility.JarvisAccessibilityService
+import com.jarvis.androidassistant. accessibility.JarvisAccessibilityService
 
 object CommandRouter {
 
@@ -29,5 +29,21 @@ object CommandRouter {
 
     fun clickText(text: String) {
         JarvisAccessibilityService.instance?.clickByText(text)
+    }
+
+    fun inputText(text: String) {
+        try {
+
+            val safeText = text.replace(" ", "%s")
+
+            val process = Runtime.getRuntime().exec(
+                arrayOf("adb", "shell", "input", "text", safeText)
+            )
+
+            process.waitFor()
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 }
